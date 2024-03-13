@@ -58,7 +58,6 @@ public class MenuController : SceneController
 
     public void LoadLevel(int level)
     {
-        LoadScene("Game");
-        //LoadScene($"Level{level}");
+        LoadScene(new GameSceneParams(level));
     }
 }

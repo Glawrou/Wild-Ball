@@ -29,7 +29,7 @@ public class GameController : SceneController
 
     private void InitPauseMenu()
     {
-        _pauseMenuWindow.OnPressMenu += () => LoadScene("Menu");
+        _pauseMenuWindow.OnPressMenu += () => LoadScene(new MenuSceneParams());
         _pauseMenuWindow.OnResume += () => _windows.Close(_pauseMenuWindow.WindowName);
     }
 }

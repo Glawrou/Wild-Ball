@@ -7,6 +7,8 @@ public class SceneController : MonoBehaviour
     [SerializeField] private SaveController _saveController;
     [SerializeField] private AudioController _audioController;
 
+    protected static SceneParams _sceneParams;
+
     protected void ClearSave()
     {
         _saveController.Clear();
@@ -27,11 +29,12 @@ public class SceneController : MonoBehaviour
 
     protected void ReloadScene()
     {
-        LoadScene(SceneManager.GetActiveScene().name);
+        LoadScene(new SceneParams(SceneManager.GetActiveScene().name));
     }
 
-    protected void LoadScene(string nameScene)
+    protected void LoadScene(SceneParams sceneParams)
     {
-        SceneManager.LoadScene(nameScene);
+        _sceneParams = sceneParams;
+        SceneManager.LoadScene(_sceneParams.SceneName);
     }
 }
