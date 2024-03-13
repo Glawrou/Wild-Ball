@@ -39,10 +39,11 @@ public class MenuController : SceneController
     {
         _settingsWindow.OnBack += OpenMenuWindow;
         _settingsWindow.OnSelectSoundData += SetAudioMixer;
+        _settingsWindow.OnClearData += ClearSave;
         _settingsWindow.SetValueAudioMixer(
-            GetValueAudioMixer(KeyMixerMaster), 
-            GetValueAudioMixer(KeyMixerSound), 
-            GetValueAudioMixer(KeyMixerMusic));
+            GetValueAudioMixer(SettingsData.KeyMixerMaster), 
+            GetValueAudioMixer(SettingsData.KeyMixerSound), 
+            GetValueAudioMixer(SettingsData.KeyMixerMusic));
     }
 
     private void OpenMenuWindow()

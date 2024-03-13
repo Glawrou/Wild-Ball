@@ -4,22 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private SaveController _saveController;
+    [SerializeField] private AudioController _audioController;
 
-    public const string KeyMixerMaster = "Master";
-    public const string KeyMixerSound = "Sound";
-    public const string KeyMixerMusic = "Music";
-
-    protected void SetAudioMixer(SoundData _soundData)
+    protected void ClearSave()
     {
-        _audioMixer.SetFloat(_soundData.Key, _soundData.Value);
+        _saveController.Clear();
+        ReloadScene();
     }
+
+    protected void SetAudioMixer(SoundData _soundData) => _audioController.Set(_soundData);
 
     protected float GetValueAudioMixer(string key)
     {
-        var value = -1f;
-        _audioMixer.GetFloat(key, out value);
-        return 1;
+        return _audioController.Get(key).Value;
     }
 
     protected void ApplicationExit()
