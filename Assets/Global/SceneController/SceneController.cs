@@ -32,13 +32,6 @@ public class SceneController : MonoBehaviour
 
     protected void LoadScene(string nameScene)
     {
-        var scenes = SceneManager.GetSceneByName(nameScene);
-        if (!scenes.IsValid())
-        {
-            Debug.LogError($"There is no scene with this name {nameScene}");
-            return;
-        }
-
-        SceneManager.LoadScene(scenes.name);
+        SceneManager.LoadScene(nameScene);
     }
 }

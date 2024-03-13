@@ -41,15 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Menu_UI
+  - name: Menu
     uniqueID: 3034250797
     locked: 0
-  - name: Menu_UI_Windows_Menu
+  - name: Menu_Windows_Menu
     uniqueID: 3303100593
     locked: 0
-  - name: Menu_UI_Windows_Select
+  - name: Menu_Windows_Select
     uniqueID: 2040132417
     locked: 0
-  - name: Menu_UI_Windows_Settings
+  - name: Menu_Windows_Settings
     uniqueID: 3976657469
+    locked: 0
+  - name: Game
+    uniqueID: 2048852441
+    locked: 0
+  - name: Game_PauseMenu
+    uniqueID: 3788238437
     locked: 0
