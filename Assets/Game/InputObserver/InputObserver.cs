@@ -5,5 +5,7 @@ using System;
 
 public abstract class InputObserver : MonoBehaviour
 {
-    public Action OnPressMenu;
+    public Action OnMenu;
+    public Action<Vector2> OnMove;
+    public Action OnJump;
 }
