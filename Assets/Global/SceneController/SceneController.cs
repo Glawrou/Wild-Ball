@@ -29,7 +29,7 @@ public class SceneController : MonoBehaviour
 
     protected void ReloadScene()
     {
-        LoadScene(new SceneParams(SceneManager.GetActiveScene().name));
+        LoadScene(SceneParams);
     }
 
     protected void LoadScene(SceneParams sceneParams)

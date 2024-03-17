@@ -9,6 +9,13 @@ public class MenuController : SceneController
     [SerializeField] private SelectWindow _selectWindow;
     [SerializeField] private SettingsWindow _settingsWindow;
 
+    private void Awake()
+    {
+        if (SceneParams == null)
+        {
+            SceneParams = new MenuSceneParams();
+        }
+    }
     private void Start()
     {
         InitWindows();

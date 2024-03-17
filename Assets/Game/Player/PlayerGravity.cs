@@ -7,6 +7,8 @@ public class PlayerGravity : MonoBehaviour
     [SerializeField] private float _gravityForce = -0.1f;
     [SerializeField] private float _gravityForceForTime = 1;
 
+    private const float MaxGravity = 30f;
+
     private float _currentGravityForce = 0;
 
     private void Awake()
@@ -30,6 +32,7 @@ public class PlayerGravity : MonoBehaviour
         if (!_triggerSurface.IsSurface)
         {
             _currentGravityForce += Time.timeScale * _gravityForceForTime;
+            _currentGravityForce = Mathf.Clamp(_currentGravityForce, float.MinValue, MaxGravity);
         }
         else
         {

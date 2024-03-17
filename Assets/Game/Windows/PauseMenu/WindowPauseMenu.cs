@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PauseMenuWindow : Window
+public class WindowPauseMenu : Window
 {
     public event Action OnPressMenu;
     public event Action OnResume;
