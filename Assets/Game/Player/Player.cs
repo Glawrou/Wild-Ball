@@ -1,23 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Animator _playerAnimator;
+    [SerializeField] private InputObserver[] _inputObserver;
+    [SerializeField] private PlayerMove _playerMove;
+    [SerializeField] private PlayerAnimation _playerAnimation;
 
-    private const string TriggerJump = "Jump";
-    private const string TriggerMove = "Move";
-    private const string BoolMove = "IsMove";
-
-    public void Jump()
+    private void Start()
     {
-        _playerAnimator.SetTrigger(TriggerJump);
-    }
-
-    public void Move(Vector2 move)
-    {
-        _playerAnimator.SetBool(BoolMove, move.y != 0);
-        _playerAnimator.SetFloat(TriggerMove, move.y);
+        foreach (var obs in _inputObserver)
+        {
+            obs.OnPlayer += _playerMove.MoveHandler;
+            obs.OnPlayer += _playerAnimation.AnimHandler;
+        }
     }
 }

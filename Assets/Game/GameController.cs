@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameController : SceneController
 {
     [SerializeField] private InputObserver _inputObserver;
-    [SerializeField] private Player _player;
 
     [Header("Windows")]
     [SerializeField] private Windows _windows;
@@ -37,8 +36,6 @@ public class GameController : SceneController
     private void InitInputObserver()
     {
         _inputObserver.OnMenu += () => _windows.Toggle(_pauseMenuWindow.WindowName);
-        _inputObserver.OnJump += _player.Jump;
-        _inputObserver.OnMove += _player.Move;
     }
 
     private void InitPauseMenu()
