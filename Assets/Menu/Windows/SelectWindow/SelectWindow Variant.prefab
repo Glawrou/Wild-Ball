@@ -371,9 +371,9 @@ MonoBehaviour:
   _backgroundWindow: {fileID: 8446719234169564213}
   _viewWindow: {fileID: 850473902708499605}
   _panel: {fileID: 2537486410563524338}
-  _levels: 10
   _buttonBackPrefab: {fileID: 4458437195632698700, guid: bd40397b462c53845804e8452a845550, type: 3}
   _buttonSelectPrefab: {fileID: 332526336955544289, guid: ee5dcfce73267d3428aecd09ac8eef87, type: 3}
+  _levelsStorage: {fileID: 4100390375178893009, guid: 5b3aa4c19cc091747a26e666ecd83012, type: 3}
 --- !u!114 &8446719234169564213 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3982973823154543255, guid: 4ecd55c68466d3843b95098f4109a434, type: 3}

@@ -24,13 +24,17 @@ public class BackgroundWindow : MonoBehaviour
 
     public void Open()
     {
-        _image.DOColor(_startColor, _duration);
+        DOTween.Sequence()
+          .Append(_image.DOColor(_startColor, _duration))
+          .SetLink(gameObject);
         _image.raycastTarget = _isClosePress;
     }
 
     public void Close()
     {
-        _image.DOColor(EmptyColor, _duration);
+        DOTween.Sequence()
+          .Append(_image.DOColor(EmptyColor, _duration))
+          .SetLink(gameObject);
         _image.raycastTarget = false;
     }
 }

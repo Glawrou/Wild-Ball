@@ -9,7 +9,9 @@ public class ViewWindow : MonoBehaviour
     public void Open()
     {
         gameObject.SetActive(true);
-        transform.DOPunchScale(Vector3.one * _scale, _duration);
+        DOTween.Sequence()
+          .Append(transform.DOPunchScale(Vector3.one * _scale, _duration))
+          .SetLink(gameObject);
     }
 
     public void Close()

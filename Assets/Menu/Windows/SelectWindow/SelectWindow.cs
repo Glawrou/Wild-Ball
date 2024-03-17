@@ -9,11 +9,13 @@ public class SelectWindow : Window
     public const string SelectWindowName = "Levels";
 
     [SerializeField] private Transform _panel;
-    [SerializeField] private int _levels = 1;
 
     [Header("Prefabs")]
     [SerializeField] private ButtonBack _buttonBackPrefab;
     [SerializeField] private ButtonLevelSelect _buttonSelectPrefab;
+    [SerializeField] private LevelsStorage _levelsStorage;
+
+    private int _levels => _levelsStorage.Count;
 
     public void Awake()
     {

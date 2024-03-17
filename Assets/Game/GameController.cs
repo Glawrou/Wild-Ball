@@ -7,7 +7,7 @@ public class GameController : SceneController
     [SerializeField] private InputObserver[] _inputObserver;
 
     [Space]
-    [SerializeField] private Level _level;
+    [SerializeField] private LevelsStorage _levelsStorage;
     [SerializeField] private GameCamera _gameCamera;
 
     [Header("Windows")]
@@ -33,7 +33,6 @@ public class GameController : SceneController
         InitPauseMenu();
         InitFinishGame();
         InitWindowDead();
-        Debug.Log($"Load level {_sceneParams.LevelNumber}");
         InitGame();
     }
 
@@ -58,7 +57,7 @@ public class GameController : SceneController
 
     private void InitFinishGame()
     {
-        _windowFinish.OnNextLevel += () => LoadScene(new GameSceneParams(_sceneParams.LevelNumber + 1));
+        _windowFinish.OnNextLevel += LoadNextLevel;
         _windowFinish.OnReloadLevel += ReloadScene;
         _windowFinish.OnGoMenu += () => LoadScene(new MenuSceneParams());
     }
@@ -71,9 +70,22 @@ public class GameController : SceneController
 
     private void InitGame()
     {
-        _level.OnDead += () => _windows.Open(_windowDead.WindowName);
-        _level.OnFinish += (count) => _windowFinish.Fill(count);
-        _level.OnFinish += (count) => _windows.Open(_windowFinish.WindowName);
-        _level.Init(_gameCamera, _inputObserver);
+        var level = _levelsStorage.Init(_sceneParams.LevelNumber, _gameCamera, _inputObserver);
+        level.OnDead += () => _windows.Open(_windowDead.WindowName);
+        level.OnFinish += (count) => _windowFinish.Fill(count);
+        level.OnFinish += (count) => _windows.Open(_windowFinish.WindowName);
+    }
+
+    private void LoadNextLevel()
+    {
+        var maxLevel = _levelsStorage.Count + 1;
+        var nextLevel = _sceneParams.LevelNumber + 1;
+        if (nextLevel >= maxLevel)
+        {
+            LoadScene(new MenuSceneParams());
+            return;
+        }
+
+        LoadScene(new GameSceneParams(nextLevel));
     }
 }
