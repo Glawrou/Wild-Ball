@@ -5,6 +5,7 @@ using UnityEngine;
 public class PCInputObserver : InputObserver
 {
     [SerializeField] private KeyCode _menuCode;
+    [SerializeField] private KeyCode _useCode;
 
     private const string KeyMoveHorizontal = "Horizontal";
     private const string KeyMoveVertical = "Vertical";
@@ -20,7 +21,8 @@ public class PCInputObserver : InputObserver
         var playerInput = new PlayerInputData(
             Input.GetAxis(KeyMoveHorizontal), 
             Input.GetAxis(KeyMoveVertical),
-            Input.GetButtonDown(KeyJump));
+            Input.GetButtonDown(KeyJump),
+            Input.GetKeyDown(_useCode));
 
         OnPlayer?.Invoke(playerInput);
     }

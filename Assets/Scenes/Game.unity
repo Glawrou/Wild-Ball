@@ -442,6 +442,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2266285643087374609, guid: a7c19c0e5c1807e4f8801f7c4ad875f6, type: 3}
+      propertyPath: _scale
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2266285643087374609, guid: a7c19c0e5c1807e4f8801f7c4ad875f6, type: 3}
+      propertyPath: _duration
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3139716661569570188, guid: a7c19c0e5c1807e4f8801f7c4ad875f6, type: 3}
       propertyPath: m_Name
       value: CanvasHints
@@ -450,6 +458,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 739875197}
+    - target: {fileID: 6061834599913042670, guid: a7c19c0e5c1807e4f8801f7c4ad875f6, type: 3}
+      propertyPath: _scale
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061834599913042670, guid: a7c19c0e5c1807e4f8801f7c4ad875f6, type: 3}
+      propertyPath: _duration
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7180215259507787767, guid: a7c19c0e5c1807e4f8801f7c4ad875f6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 217.999
@@ -668,6 +684,10 @@ PrefabInstance:
       propertyPath: _pauseMenuWindow
       value: 
       objectReference: {fileID: 941676594}
+    - target: {fileID: 2524706892150641539, guid: 574a3c5b8e53bae4faf018aea03c4146, type: 3}
+      propertyPath: _useCode
+      value: 101
+      objectReference: {fileID: 0}
     - target: {fileID: 2556026427515188134, guid: 574a3c5b8e53bae4faf018aea03c4146, type: 3}
       propertyPath: m_Name
       value: SceneController
