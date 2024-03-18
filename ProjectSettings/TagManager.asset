@@ -59,6 +59,9 @@ TagManager:
   - name: Game
     uniqueID: 2048852441
     locked: 0
+  - name: Game_Hints
+    uniqueID: 1091926169
+    locked: 0
   - name: Game_PauseMenu
     uniqueID: 3788238437
     locked: 0

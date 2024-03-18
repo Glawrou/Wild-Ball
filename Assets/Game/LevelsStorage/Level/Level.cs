@@ -23,7 +23,6 @@ public class Level : MonoBehaviour
 
     public void Init(GameCamera gameCamera, InputObserver[] inputObservers)
     {
-        Debug.Log($"Load level {LevelNumber}");
         _player = _start.Spawn(_playerPrifab);
         _player.Init(inputObservers);
         _gameCamera = gameCamera;
