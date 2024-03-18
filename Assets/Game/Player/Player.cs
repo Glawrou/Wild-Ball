@@ -1,7 +1,10 @@
 using UnityEngine;
+using System;
 
 public class Player : MonoBehaviour
 {
+    public event Action OnDead;
+
     public const string PlayerTag = "Player";
 
     [SerializeField] private PlayerMove _playerMove;
@@ -26,8 +29,14 @@ public class Player : MonoBehaviour
         _useLevelItem = levelItem;
     }
 
+    public void Finish()
+    {
+        Destroy(gameObject);
+    }
+
     public void Dead()
     {
+        OnDead?.Invoke();
         Destroy(gameObject);
     }
 

@@ -5,16 +5,25 @@ using UnityEngine;
 
 public class DeadTrigger : MonoBehaviour
 {
-    public event Action OnDead;
+    [SerializeField] private GameObject _deadEffect;
+
+    private const float DelayDead = 10f;
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
-        if (other.gameObject.tag != Player.PlayerTag)
+        SpawnDeadEffect(other.transform.position);
+        if (other.gameObject.tag == Player.PlayerTag)
         {
+            other.GetComponent<Player>().Dead();
             return;
         }
 
-        OnDead?.Invoke();
+        Destroy(other.gameObject);
+    }
+
+    public void SpawnDeadEffect(Vector3 position)
+    {
+        var effect = Instantiate(_deadEffect, position, Quaternion.identity, null);
+        Destroy(effect, DelayDead);
     }
 }

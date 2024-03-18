@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758271376e1b81f4d9ea8516d72ce153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deadEffect: {fileID: 6137772668438474001, guid: b1f1e7928dc6f0740846f414ecdf0edd, type: 3}
 --- !u!33 &7571279414222290745
 MeshFilter:
   m_ObjectHideFlags: 0

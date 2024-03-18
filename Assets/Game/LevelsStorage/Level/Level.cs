@@ -25,9 +25,9 @@ public class Level : MonoBehaviour
     {
         _player = _start.Spawn(_playerPrifab);
         _player.Init(inputObservers);
+        _player.OnDead += () => OnDead?.Invoke();
         _gameCamera = gameCamera;
         _gameCamera.SetTarget(_player);
-        _deadTrigger.OnDead += () => OnDead?.Invoke();
         _finish.OnFinish += (count) => OnFinish?.Invoke(count);
     }
 }

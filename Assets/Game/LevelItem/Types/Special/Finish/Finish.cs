@@ -17,7 +17,7 @@ public class Finish : LevelItem
         }
 
         var player = other.GetComponent<Player>();
-        player.Dead();
+        player.Finish();
         OnFinish?.Invoke(_countPlayers++);
     }
 }
