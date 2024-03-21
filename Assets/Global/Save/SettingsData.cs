@@ -4,6 +4,8 @@ using UnityEngine;
 [Serializable]
 public class SettingsData
 {
+    public int local;
+
     public float ValueAudioMaster;
     public float ValueAudioMusic;
     public float ValueAudioSound;
@@ -14,6 +16,7 @@ public class SettingsData
 
     public SettingsData()
     {
+        local = -1;
         ValueAudioMaster = 1;
         ValueAudioMusic = 1;
         ValueAudioSound = 1;

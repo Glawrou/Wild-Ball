@@ -10,18 +10,27 @@ public class SceneController : MonoBehaviour
 {
     [SerializeField] private SaveController _saveController;
     [SerializeField] private AudioController _audioController;
+    [SerializeField] private LocalizeController _localizeController;
 
     protected static SceneParams SceneParams;
 
     private const int FpsTarget = 60;
-    
-    private int _localeIndex = 0;
 
     protected void Awake()
     {
         Application.targetFrameRate = FpsTarget;
-        var locales = LocalizationSettings.AvailableLocales.Locales.ToArray();
-        _localeIndex = Array.IndexOf(locales, LocalizationSettings.SelectedLocale);
+    }
+
+    protected LevelResultData[] GetLevelsResult()
+    {
+        return _saveController.Get().PlayerProgressData.levels.ToArray();
+    }
+
+    protected void AddResultLevel(int level, int stars)
+    {
+        var save = _saveController.Get();
+        save.PlayerProgressData.AddResult(level, stars);
+        _saveController.Save();
     }
 
     protected void ClearSave()
@@ -47,11 +56,7 @@ public class SceneController : MonoBehaviour
         LoadScene(SceneParams);
     }
 
-    protected void SwitchLanguage()
-    {
-        _localeIndex = _localeIndex + 1 >= LocalizationSettings.AvailableLocales.Locales.Count ? 0 : _localeIndex + 1;
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[_localeIndex];
-    }
+    protected void SwitchLanguage() => _localizeController.SwitchLanguage();
 
     protected void LoadSceneForTransite(SceneParams sceneParams)
     {

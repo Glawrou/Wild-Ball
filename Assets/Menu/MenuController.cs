@@ -40,6 +40,7 @@ public class MenuController : SceneController
 
     private void InitSelectWindow()
     {
+        _selectWindow.Init(GetLevelsResult());
         _selectWindow.OnBack += OpenMenuWindow;
         _selectWindow.OnLevelPress += LoadLevel;
     }

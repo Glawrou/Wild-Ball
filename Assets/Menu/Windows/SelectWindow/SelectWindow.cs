@@ -15,23 +15,32 @@ public class SelectWindow : Window
     [SerializeField] private ButtonLevelSelect _buttonSelectPrefab;
     [SerializeField] private LevelsStorage _levelsStorage;
 
-    private int _levels => _levelsStorage.Count;
+    private int _levelsStorageCount => _levelsStorage.Count;
+    private LevelResultData[] _levels;
 
     public void Awake()
     {
         WindowName = SelectWindowName;
-        Instantiate(_buttonBackPrefab, _panel)
-            .OnPress += () => OnBack?.Invoke();
-        for (var levelNumber = 1; levelNumber <= _levels; levelNumber++)
-        {
-            var levelButton = Instantiate(_buttonSelectPrefab, _panel);
-            levelButton.OnPress += (level) => OnLevelPress?.Invoke(level);
-            levelButton.Init(levelNumber);
-        }
     }
 
     private void Start()
     {
         _backgroundWindow.OnClick += () => OnBack?.Invoke();
+    }
+
+    public void Init(LevelResultData[] levels)
+    {
+        _levels = levels;
+        Instantiate(_buttonBackPrefab, _panel)
+            .OnPress += () => OnBack?.Invoke();
+        for (var levelNumber = 1; levelNumber <= _levelsStorageCount; levelNumber++)
+        {
+            var levelButton = Instantiate(_buttonSelectPrefab, _panel);
+            levelButton.OnPress += (level) => OnLevelPress?.Invoke(level);
+            levelButton.Init(
+                levelNumber, 
+                _levels.Length < levelNumber ? null : _levels[levelNumber - 1], 
+                levelNumber <= _levels.Length + 1);
+        }
     }
 }

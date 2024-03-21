@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2333545810356604110}
   - component: {fileID: 4566563586943146937}
   - component: {fileID: 725066862117339930}
+  - component: {fileID: 1329813142269426125}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _saveController: {fileID: 4566563586943146937}
   _audioController: {fileID: 725066862117339930}
+  _localizeController: {fileID: 1329813142269426125}
   _windows: {fileID: 0}
   _menuWindow: {fileID: 0}
   _selectWindow: {fileID: 0}
@@ -77,4 +79,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: 464a737bba7ae9c40a31b325c0c4b228, type: 2}
+  _saveController: {fileID: 4566563586943146937}
+--- !u!114 &1329813142269426125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602930416697689235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9a6cc2c8c82014895d6f4af8c7233f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _saveController: {fileID: 4566563586943146937}

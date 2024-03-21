@@ -11,7 +11,8 @@ public class WindowFinish : Window
     [SerializeField] private Button _nextLevel;
     [SerializeField] private Button _reloadLevel;
     [SerializeField] private Button _goMenu;
-    [SerializeField] private Text _place;
+    [SerializeField] private Transform _hader;
+    [SerializeField] private GameObject _uiStarPrefab;
 
     [Header("Audio")]
     [SerializeField] private AudioPlay _audioPlay;
@@ -26,9 +27,17 @@ public class WindowFinish : Window
         _goMenu.onClick.AddListener(() => OnGoMenu?.Invoke());
     }
 
-    public void Fill(int place)
+    public void Fill(int stars)
     {
         Instantiate(_audioPlay, null).PlayOneShot(AudioPlay.AudioKeyWin);
-        _place.text = place.ToString();
+        CreateStars(stars);
+    }
+
+    public void CreateStars(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            Instantiate(_uiStarPrefab, _hader);
+        }
     }
 }

@@ -885,17 +885,9 @@ PrefabInstance:
       propertyPath: _pauseMenuWindow
       value: 
       objectReference: {fileID: 941676594}
-    - target: {fileID: 2524706892150641539, guid: 574a3c5b8e53bae4faf018aea03c4146, type: 3}
-      propertyPath: _useCode
-      value: 101
-      objectReference: {fileID: 0}
     - target: {fileID: 2556026427515188134, guid: 574a3c5b8e53bae4faf018aea03c4146, type: 3}
       propertyPath: m_Name
       value: SceneController
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342338038345449702, guid: 574a3c5b8e53bae4faf018aea03c4146, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 8531923653761076797, guid: 574a3c5b8e53bae4faf018aea03c4146, type: 3}
       propertyPath: m_LocalPosition.x

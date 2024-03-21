@@ -16,7 +16,7 @@ public class TransitController : SceneController
     private new void Awake()
     {
         base.Awake();
-        _buttonContinue.onClick.AddListener(() => LoadScene(_sceneParams.NextScene));
+        _buttonContinue.onClick.AddListener(ClickContinueHandler);
         if (SceneParams == null)
         {
             SceneParams = new TransitSceneParams(new MenuSceneParams());
@@ -30,6 +30,7 @@ public class TransitController : SceneController
 
     private IEnumerator Init()
     {
+        Music.Instance.Pause();
         _buttonContinue.interactable = false;
         for (var i = 0f; i < Delay; i += Time.deltaTime)
         {
@@ -39,5 +40,11 @@ public class TransitController : SceneController
 
         _imageContinue.fillAmount = 1;
         _buttonContinue.interactable = true;
+    }
+
+    private void ClickContinueHandler()
+    {
+        Music.Instance.Play();
+        LoadScene(_sceneParams.NextScene);
     }
 }

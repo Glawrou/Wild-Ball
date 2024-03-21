@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 758219568}
   - component: {fileID: 758219567}
   - component: {fileID: 758219566}
+  - component: {fileID: 758219569}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -516,8 +517,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _saveController: {fileID: 758219567}
   _audioController: {fileID: 758219566}
+  _localizeController: {fileID: 758219569}
   _buttonContinue: {fileID: 1410220655}
   _imageContinue: {fileID: 1410220656}
+--- !u!114 &758219569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758219564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9a6cc2c8c82014895d6f4af8c7233f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _saveController: {fileID: 758219567}
 --- !u!1 &1315522473
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +649,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1663140678371320547, guid: b07d945d098e04d4989574d5c3d1eb96, type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663140678371320547, guid: b07d945d098e04d4989574d5c3d1eb96, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.2735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663140678371320547, guid: b07d945d098e04d4989574d5c3d1eb96, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.2735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663140678371320547, guid: b07d945d098e04d4989574d5c3d1eb96, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.2735849
       objectReference: {fileID: 0}
     - target: {fileID: 1906004861098714190, guid: b07d945d098e04d4989574d5c3d1eb96, type: 3}
       propertyPath: m_Pivot.x
@@ -753,8 +780,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ac9e02ea18781ab459dd5feca42c0db1, type: 3}
     - target: {fileID: 9020682019001031374, guid: b07d945d098e04d4989574d5c3d1eb96, type: 3}
+      propertyPath: m_Color.b
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020682019001031374, guid: b07d945d098e04d4989574d5c3d1eb96, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020682019001031374, guid: b07d945d098e04d4989574d5c3d1eb96, type: 3}
       propertyPath: m_FillAmount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020682019001031374, guid: b07d945d098e04d4989574d5c3d1eb96, type: 3}
+      propertyPath: m_FillMethod
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

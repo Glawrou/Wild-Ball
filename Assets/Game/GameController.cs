@@ -73,8 +73,7 @@ public class GameController : SceneController
     {
         var level = _levelsStorage.Init(_sceneParams.LevelNumber, _gameCamera, _inputObserver);
         level.OnDead += () => _windows.Open(_windowDead.WindowName);
-        level.OnFinish += (count) => _windowFinish.Fill(count);
-        level.OnFinish += (count) => _windows.Open(_windowFinish.WindowName);
+        level.OnFinish += FinishHandler;
     }
 
     private void LoadNextLevel()
@@ -88,5 +87,12 @@ public class GameController : SceneController
         }
 
         LoadSceneForTransite(new GameSceneParams(nextLevel));
+    }
+
+    private void FinishHandler(int stars)
+    {
+        AddResultLevel(_sceneParams.LevelNumber, stars);
+        _windowFinish.Fill(stars);
+        _windows.Open(_windowFinish.WindowName);
     }
 }
