@@ -14,12 +14,14 @@ public class Level : MonoBehaviour
     [SerializeField] private Start _start;
     [SerializeField] private Finish _finish;
     [SerializeField] private DeadTrigger _deadTrigger;
+    [SerializeField] private Star[] _stars;
 
     [Space]
     [SerializeField] private Player _playerPrifab;
 
     private GameCamera _gameCamera;
     private Player _player;
+    private int _starCollectCount = 0;
 
     public void Init(GameCamera gameCamera, InputObserver[] inputObservers)
     {
@@ -28,6 +30,16 @@ public class Level : MonoBehaviour
         _player.OnDead += () => OnDead?.Invoke();
         _gameCamera = gameCamera;
         _gameCamera.SetTarget(_player);
-        _finish.OnFinish += (count) => OnFinish?.Invoke(count);
+        _finish.OnFinish += (count) => OnFinish?.Invoke(_starCollectCount);
+
+        foreach (var star in _stars)
+        {
+            star.OnCollect += StarCollectHandler;
+        }
+    }
+
+    public void StarCollectHandler()
+    {
+        _starCollectCount++;
     }
 }
