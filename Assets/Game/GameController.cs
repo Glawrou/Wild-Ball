@@ -87,6 +87,6 @@ public class GameController : SceneController
             return;
         }
 
-        LoadScene(new GameSceneParams(nextLevel));
+        LoadSceneForTransite(new GameSceneParams(nextLevel));
     }
 }

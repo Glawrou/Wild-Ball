@@ -68,6 +68,6 @@ public class MenuController : SceneController
 
     public void LoadLevel(int level)
     {
-        LoadScene(new GameSceneParams(level));
+        LoadSceneForTransite(new GameSceneParams(level));
     }
 }

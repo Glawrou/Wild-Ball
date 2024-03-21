@@ -7,7 +7,6 @@ public class ButtonPlay : MonoBehaviour
 {
     [SerializeField] private AudioPlay _audioPlayPrefab;
     [SerializeField] private Button _button;
-    [SerializeField] private AudioClip _audio;
 
     private void Awake()
     {
@@ -16,7 +15,6 @@ public class ButtonPlay : MonoBehaviour
 
     private void ClickHandler()
     {
-        var audio = Instantiate(_audioPlayPrefab, Vector3.zero, Quaternion.identity, null);
-        audio.PlayOneShot(_audio);
+        Instantiate(_audioPlayPrefab, null).PlayOneShot(AudioPlay.AudioKeyClick);
     }
 }

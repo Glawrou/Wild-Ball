@@ -15,7 +15,8 @@ public class Star : PlayerTrigger
 
     private void PlayerEnterHandler(Player player)
     {
-        Instantiate(_collectEffect, transform.position, Quaternion.identity, null);
+        var collectEffect = Instantiate(_collectEffect, transform.position, Quaternion.identity, null);
+        collectEffect.Play();
         Instantiate(_audioPlay, null).PlayOneShot(AudioPlay.AudioKeyCollect);
         OnCollect?.Invoke();
         Destroy(gameObject);

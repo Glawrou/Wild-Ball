@@ -53,6 +53,11 @@ public class SceneController : MonoBehaviour
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[_localeIndex];
     }
 
+    protected void LoadSceneForTransite(SceneParams sceneParams)
+    {
+        LoadScene(new TransitSceneParams(sceneParams));
+    }
+
     protected void LoadScene(SceneParams sceneParams)
     {
         SceneParams = sceneParams;
