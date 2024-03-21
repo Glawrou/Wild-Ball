@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3596848971301999718}
+  - component: {fileID: 3460616288718147142}
   - component: {fileID: 332526336955544289}
   - component: {fileID: 8716083819254294323}
   - component: {fileID: 2502302614156352173}
@@ -40,6 +41,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3460616288718147142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143156852895612092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2686243775cbb149a2f0ba59ba59c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioPlayPrefab: {fileID: 538389969434709212, guid: 406732bb63ec5144fa27feb953d86aad, type: 3}
+  _button: {fileID: 1437017316017858000}
+  _audio: {fileID: 8300000, guid: c70e6f0f3600e634e94a04cb50a3c861, type: 3}
 --- !u!114 &332526336955544289
 MonoBehaviour:
   m_ObjectHideFlags: 0

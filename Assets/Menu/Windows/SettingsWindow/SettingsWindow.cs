@@ -6,12 +6,14 @@ public class SettingsWindow : Window
 {
     public event Action OnBack;
     public event Action OnClearData;
+    public event Action OnSwitchLanguage;
     public event Action<SoundData> OnSelectSoundData;
 
     public const string SettingsWindowName = "Settings";
 
     [SerializeField] private Button _buttonClearData;
     [SerializeField] private ButtonBack _buttonBack;
+    [SerializeField] private Button _buttonLanguage;
     [SerializeField] private Slider _masterSlider;
     [SerializeField] private Slider _musicSlider;
     [SerializeField] private Slider _soundSlider;
@@ -21,6 +23,7 @@ public class SettingsWindow : Window
         WindowName = SettingsWindowName;
         _buttonBack.OnPress += () => OnBack?.Invoke();
         _backgroundWindow.OnClick += () => OnBack?.Invoke();
+        _buttonLanguage.onClick.AddListener(() => OnSwitchLanguage?.Invoke());
         _buttonClearData.onClick.AddListener(() => OnClearData?.Invoke());
         _masterSlider.onValueChanged
             .AddListener((value) => ChangeValueHandler(SettingsData.KeyMixerMaster, value));

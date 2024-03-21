@@ -368,14 +368,6 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4881979831697074436, guid: 7a448e55f755fe349b75b49122f01504, type: 3}
-      propertyPath: _buttonMenu
-      value: 
-      objectReference: {fileID: 683678350400255022}
-    - target: {fileID: 4881979831697074436, guid: 7a448e55f755fe349b75b49122f01504, type: 3}
-      propertyPath: _buttonRestart
-      value: 
-      objectReference: {fileID: 195728631582925063}
     - target: {fileID: 5750001995052432260, guid: 7a448e55f755fe349b75b49122f01504, type: 3}
       propertyPath: m_Name
       value: ButtonMenu
@@ -469,28 +461,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a448e55f755fe349b75b49122f01504, type: 3}
---- !u!114 &195728631582925063 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7547814451911209715, guid: 7a448e55f755fe349b75b49122f01504, type: 3}
-  m_PrefabInstance: {fileID: 7640470456715547636}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &683678350400255022 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7166509794178557914, guid: 7a448e55f755fe349b75b49122f01504, type: 3}
-  m_PrefabInstance: {fileID: 7640470456715547636}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &9148629248982922222 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1512667084147236890, guid: 7a448e55f755fe349b75b49122f01504, type: 3}

@@ -45,6 +45,7 @@ public class MenuController : SceneController
     private void InitSettingsWindow()
     {
         _settingsWindow.OnBack += OpenMenuWindow;
+        _settingsWindow.OnSwitchLanguage += SwitchLanguage;
         _settingsWindow.OnSelectSoundData += SetAudioMixer;
         _settingsWindow.OnClearData += ClearSave;
         _settingsWindow.SetValueAudioMixer(

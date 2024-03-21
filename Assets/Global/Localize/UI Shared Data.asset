@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: 3c1180f683d59054b8490f89c19a97c9
+  m_Entries:
+  - m_Id: 8167915520
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 390927515648
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 504135974912
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1031372570624
+    m_Key: Master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1178974322688
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1212902047744
+    m_Key: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1699223207936
+    m_Key: Clear save data
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3069825286144
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3147910643712
+    m_Key: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273551020032
+    m_Key: Next level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3888511483904
+    m_Key: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4181261320192
+    m_Key: Level failed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4492151521280
+    m_Key: Stars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5382384156672
+    m_Key: Press E for use
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5750082011136
+    m_Key: Keys for movement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5954860515328
+    m_Key: Jump key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6119843463168
+    m_Key: Key for use
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6214775559916879896
+  references:
+    version: 2
+    RefIds:
+    - rid: 6214775559916879896
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1711029071937

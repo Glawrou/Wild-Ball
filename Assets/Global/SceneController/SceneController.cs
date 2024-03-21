@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using System.Linq;
+using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class SceneController : MonoBehaviour
 {
@@ -8,6 +12,14 @@ public class SceneController : MonoBehaviour
     [SerializeField] private AudioController _audioController;
 
     protected static SceneParams SceneParams;
+
+    private int _localeIndex = 0;
+
+    private void Awake()
+    {
+        var locales = LocalizationSettings.AvailableLocales.Locales.ToArray();
+        _localeIndex = Array.IndexOf(locales, LocalizationSettings.SelectedLocale);
+    }
 
     protected void ClearSave()
     {
@@ -30,6 +42,12 @@ public class SceneController : MonoBehaviour
     protected void ReloadScene()
     {
         LoadScene(SceneParams);
+    }
+
+    protected void SwitchLanguage()
+    {
+        _localeIndex = _localeIndex + 1 >= LocalizationSettings.AvailableLocales.Locales.Count ? 0 : _localeIndex + 1;
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[_localeIndex];
     }
 
     protected void LoadScene(SceneParams sceneParams)
