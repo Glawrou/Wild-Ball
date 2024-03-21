@@ -81,6 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectEffect: {fileID: 5819643513290195576, guid: f55b1ba9a6cdc5942b92f4fde77e44b4, type: 3}
+  _audioPlay: {fileID: 538389969434709212, guid: 406732bb63ec5144fa27feb953d86aad, type: 3}
+  _audioClip: {fileID: 8300000, guid: d054203779ed9cf408a5f9ca87c8d625, type: 3}
 --- !u!33 &1642885689348015722
 MeshFilter:
   m_ObjectHideFlags: 0

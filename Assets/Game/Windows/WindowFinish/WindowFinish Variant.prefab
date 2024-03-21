@@ -586,6 +586,8 @@ MonoBehaviour:
   _reloadLevel: {fileID: 112501862226789534}
   _goMenu: {fileID: 5744344205585552754}
   _place: {fileID: 2635419153328304649}
+  _audioPlay: {fileID: 538389969434709212, guid: 406732bb63ec5144fa27feb953d86aad, type: 3}
+  _winClip: {fileID: 8300000, guid: d81e36228724a4a44a13b8265b72416f, type: 3}
 --- !u!224 &1817062316266844718 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2795529369559849698, guid: 4ecd55c68466d3843b95098f4109a434, type: 3}

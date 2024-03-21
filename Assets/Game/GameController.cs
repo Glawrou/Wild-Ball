@@ -18,8 +18,9 @@ public class GameController : SceneController
 
     private GameSceneParams _sceneParams => SceneParams as GameSceneParams;
 
-    private void Awake()
+    private new void Awake()
     {
+        base.Awake();
         if (SceneParams == null)
         {
             SceneParams = new GameSceneParams(0);

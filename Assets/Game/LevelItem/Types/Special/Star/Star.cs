@@ -6,6 +6,7 @@ public class Star : PlayerTrigger
     public event Action OnCollect;
 
     [SerializeField] private ParticleSystem _collectEffect;
+    [SerializeField] private AudioPlay _audioPlay;
 
     private void Awake()
     {
@@ -15,6 +16,7 @@ public class Star : PlayerTrigger
     private void PlayerEnterHandler(Player player)
     {
         Instantiate(_collectEffect, transform.position, Quaternion.identity, null);
+        Instantiate(_audioPlay, null).PlayOneShot(AudioPlay.AudioKeyCollect);
         OnCollect?.Invoke();
         Destroy(gameObject);
     }

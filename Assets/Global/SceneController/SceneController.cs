@@ -13,10 +13,13 @@ public class SceneController : MonoBehaviour
 
     protected static SceneParams SceneParams;
 
+    private const int FpsTarget = 60;
+    
     private int _localeIndex = 0;
 
-    private void Awake()
+    protected void Awake()
     {
+        Application.targetFrameRate = FpsTarget;
         var locales = LocalizationSettings.AvailableLocales.Locales.ToArray();
         _localeIndex = Array.IndexOf(locales, LocalizationSettings.SelectedLocale);
     }

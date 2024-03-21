@@ -610,3 +610,4 @@ MonoBehaviour:
   _viewWindow: {fileID: 2272484538973828886}
   _buttonRestart: {fileID: 6743148895998167599}
   _buttonMenu: {fileID: 65194359613089933}
+  _audioPlay: {fileID: 538389969434709212, guid: 406732bb63ec5144fa27feb953d86aad, type: 3}

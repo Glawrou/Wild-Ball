@@ -13,6 +13,9 @@ public class WindowFinish : Window
     [SerializeField] private Button _goMenu;
     [SerializeField] private Text _place;
 
+    [Header("Audio")]
+    [SerializeField] private AudioPlay _audioPlay;
+
     public const string WindowFinishName = "WindowFinish";
 
     public void Awake()
@@ -25,6 +28,7 @@ public class WindowFinish : Window
 
     public void Fill(int place)
     {
+        Instantiate(_audioPlay, null).PlayOneShot(AudioPlay.AudioKeyWin);
         _place.text = place.ToString();
     }
 }

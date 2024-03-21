@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private CharacterController _characterController;
     [SerializeField] private PlayerGravity _playerGravity;
     [SerializeField] private TriggerSurface _triggerSurface;
+    [SerializeField] private PlayerSound _playerSound;
 
     [Space]
     [SerializeField] private float _jumpForce = 30f; 
@@ -16,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (playerInput.Jump && _triggerSurface.IsSurface)
         {
+            _playerSound.PlayJump();
             _playerGravity.AddGravity(-_jumpForce);
         }
 

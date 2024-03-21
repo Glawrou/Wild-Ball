@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private PlayerMove _playerMove;
     [SerializeField] private PlayerAnimation _playerAnimation;
+    [SerializeField] private PlayerSound _playerSound;
 
     private InputObserver[] _inputObserver;
     private UseLevelItem _useLevelItem;
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour
 
     public void Dead()
     {
+        _playerSound.PlayDie();
         OnDead?.Invoke();
         Destroy(gameObject);
     }
