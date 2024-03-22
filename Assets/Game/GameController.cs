@@ -23,7 +23,7 @@ public class GameController : SceneController
         base.Awake();
         if (SceneParams == null)
         {
-            SceneParams = new GameSceneParams(0);
+            SceneParams = new GameSceneParams(1);
         }
     }
 

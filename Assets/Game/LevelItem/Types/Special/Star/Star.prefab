@@ -82,7 +82,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collectEffect: {fileID: 5819643513290195576, guid: f55b1ba9a6cdc5942b92f4fde77e44b4, type: 3}
   _audioPlay: {fileID: 538389969434709212, guid: 406732bb63ec5144fa27feb953d86aad, type: 3}
-  _audioClip: {fileID: 8300000, guid: d054203779ed9cf408a5f9ca87c8d625, type: 3}
 --- !u!33 &1642885689348015722
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -111,7 +110,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31334de8eaae2084aaf67dca53c9358f, type: 2}
+  - {fileID: 2100000, guid: 66c3c69beaacf424e9b9c99e6dbead2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
