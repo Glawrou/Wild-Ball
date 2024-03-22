@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnObject: {fileID: 4208384635785568522, guid: 97177051ec5d65341b6c2f70eafbe242, type: 3}
   _spawnPoint: {fileID: 3328330341993976353}
-  _startForce: {x: -200, y: 0, z: 0}
+  _startForce: 200
   _autoSpawn: 1
   _delayAutoSpawn: 5
 --- !u!33 &1080996061333360838
